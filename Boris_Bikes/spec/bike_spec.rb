@@ -1,7 +1,12 @@
 require 'bike'
 
 describe Bike do
-  it 'is bike working?' do
-    expect(Bike.new).to respond_to(:working?)
+  subject(:bike) {Bike.new}
+  it 'does bike respond to working?' do
+    expect(bike).to respond_to(:working?)
+  end
+
+  it "does bike work?" do
+    expect(bike.working?).to eq(true)
   end
 end
