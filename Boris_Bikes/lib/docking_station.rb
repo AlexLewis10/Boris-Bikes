@@ -1,4 +1,5 @@
 require './lib/bike'
+#require './lib/counter'
 
 class DockingStation
   attr_reader:bike
@@ -11,6 +12,7 @@ class DockingStation
     @bike = bike
     return @bike
   end
+
 end
 
 
