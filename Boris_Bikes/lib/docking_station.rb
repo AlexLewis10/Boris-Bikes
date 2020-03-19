@@ -1,23 +1,27 @@
 require './lib/bike'
 
 class DockingStation
+  attr_reader:bike
   def release_bike
     Bike.new
   end
-
+  def dock(bike)
+    @bike = bike
+    return @bike
+  end
 end
 
 
 =begin
+As a member of the public
+So I can return bikes I've hired
+I want to dock my bike at the docking station
 
-class Bike
-  attr_reader :working
-  def initialize
-    @working = true
-  end
-  def working?
-    working
-  end
-end
+
+
+
+As a member of the public
+So I can decide whether to use the docking station
+I want to see a bike that has been docked
 
 =end
