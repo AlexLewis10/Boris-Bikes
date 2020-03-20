@@ -2,15 +2,21 @@ require './lib/bike'
 #require './lib/counter'
 
 class DockingStation
-  attr_reader:bike
+  attr_reader :bike
 
   def release_bike
-    Bike.new
+    #commented out to stop runtime error on loading
+    #nil
+    #if @bike == nil
+    #  raise 'No Bikes Available!'
+    #end
+    #  Bike.new
+    #end
   end
 
   def dock(bike)
     @bike = bike
-    return @bike
+    @bike
   end
 
 end

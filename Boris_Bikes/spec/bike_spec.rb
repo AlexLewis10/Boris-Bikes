@@ -8,10 +8,5 @@ describe Bike do
 
   it "does bike work?" do
     expect(bike.working?).to eq(true)
-  end
-
-  it "does bike respond to present" do
-  expect(bike).to respond_to(:present?)
-  end
-  
+  end  
 end
